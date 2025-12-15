@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+//Added for Ref and Portal demos
 // The first video mentioned using React.createRef, which we will use.
 
 /* ===============================================
