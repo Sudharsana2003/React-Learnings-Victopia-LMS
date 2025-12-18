@@ -150,10 +150,10 @@ export default function App() {
       {/* ===============================================
           5. Higher-Order Component (HOC) Demo
          =============================================== */}
-      <div>
+        <div>
         <h3>5. Higher-Order Component Demo</h3>
-        <ClickCounter />
-        <HoverCounter />
+        <ClickCounter name="sudharsana" />
+        <HoverCounter name="sudharsana" />
         <hr />
       </div>
     </div>
