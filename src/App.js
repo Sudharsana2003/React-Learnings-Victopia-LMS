@@ -5,11 +5,15 @@ import Hero from "./components/Hero";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ClickCounter from "./components/ClickCounter";
 import HoverCounter from "./components/HoverCounter";
+import C from "./components/C";
+import E from "./components/E";
+import { UserProvider } from "./components/UserContext";
+import PostList from "./components/PostList";
+
 
 /* ===============================================
 1. Refs on Class Components
 =============================================== */
-
 class ClassInput extends Component {
   constructor(props) {
     super(props);
@@ -56,7 +60,6 @@ class ClassRefDemo extends Component {
 /* ===============================================
 2. Ref Forwarding
 =============================================== */
-
 const FRInput = React.forwardRef((props, ref) => (
   <div>
     <label>Forwarded Ref Input: </label>
@@ -89,7 +92,6 @@ class ForwardRefDemo extends Component {
 /* ===============================================
 3. React Portal
 =============================================== */
-
 const PortalDemo = (props) => {
   const portalRoot = document.getElementById("portal-root");
 
@@ -106,7 +108,6 @@ const PortalDemo = (props) => {
 /* ===============================================
 4. Error Boundary Demo
 =============================================== */
-
 const ErrorBoundaryDemo = () => {
   return (
     <div>
@@ -132,30 +133,42 @@ const ErrorBoundaryDemo = () => {
 /* ===============================================
 Main App
 =============================================== */
-
 export default function App() {
   return (
     <div style={{ margin: "20px" }}>
       <h1>React Concepts Demonstrator</h1>
 
+      {/* 1. Refs on Class Components */}
       <ClassRefDemo />
+
+      {/* 2. Ref Forwarding */}
       <ForwardRefDemo />
 
+      {/* 3. React Portal */}
       <PortalDemo>
         <p>Portal content</p>
       </PortalDemo>
 
+      {/* 4. Error Boundary Demo */}
       <ErrorBoundaryDemo />
 
-      {/* ===============================================
-          5. Higher-Order Component (HOC) Demo
-         =============================================== */}
-        <div>
+      {/* 5. Higher-Order Component Demo */}
+      <div>
         <h3>5. Higher-Order Component Demo</h3>
         <ClickCounter name="sudharsana" />
         <HoverCounter name="sudharsana" />
         <hr />
       </div>
-    </div>
+
+      {/* 6. Context API Demo */}
+      <div>
+        <h2>6. React Context Demo</h2>
+        <UserProvider value="Vishwas">
+          <C />
+        </UserProvider>
+      </div>
+      {/* 7. ComponentDidMount API Call Demo */}
+    <PostList />
+</div>
   );
 }
