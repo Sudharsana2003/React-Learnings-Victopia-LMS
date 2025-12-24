@@ -9,7 +9,7 @@ import C from "./components/C";
 import E from "./components/E";
 import { UserProvider } from "./components/UserContext";
 import PostList from "./components/PostList";
-
+import PostForm from "./components/PostForm";
 
 /* ===============================================
 1. Refs on Class Components
@@ -167,8 +167,17 @@ export default function App() {
           <C />
         </UserProvider>
       </div>
-      {/* 7. ComponentDidMount API Call Demo */}
-    <PostList />
+
+    {/* 7. ComponentDidMount API Call Demo */}
+<div>
+  <h2>7. Post Form Demo</h2>
+  <PostForm />
+  <hr />
+</div>
+
+{/* 8. Post List */}
+<PostList />
+
 </div>
   );
 }
